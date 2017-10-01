@@ -1,0 +1,90 @@
+.wrapper {
+  width: 650px;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.fi--info.lead {
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  margin-bottom: 1rem;
+  max-width: 100%;
+  font-size: 16px;
+}
+
+.fi--info:before {
+  content:'';        /* instead of content you could use a bgimage here */
+  background: url('face.png') no-repeat left;
+  background-size: 64px;
+  float:left;
+  -moz-transition:0.5s all;
+  -webkit-transition:0.5s all;
+  height: 64px;
+  width: 64px;
+  margin-right: 1rem;
+
+  transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);
+}
+
+.fi--info:hover:before {
+  transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+}
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+.text-center {
+  text-align: center;
+}
+
+
+.tangle--dynamic {
+  color: #258C32;
+}
+
+
+.TKAdjustableNumber, .FIAdjustableNumber {
+	position:relative;
+	color: #4CB058;
+	border-bottom: 1px dashed #4CB058;
+	cursor: col-resize;
+}
+
+.TKAdjustableNumberDown, .FIAdjustableNumberDown {
+	color: #00c;
+	border-bottom: 1px dashed #00c;
+}
+
+.TKAdjustableNumberHelp, .FIAdjustableNumberHelp {
+	position:absolute;
+	color: #4CB058;
+	font: 10px "Helvetica-Neue", "Arial", sans-serif;
+}
+
+.FIAdjustableNumberSlider {
+  position: absolute;
+  display: none;
+  width: 134px;
+  height: 8px;
+  margin-top: -26px;
+  background-image: url("SliderBackground.png");
+  top: 17px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.FIAdjustableNumberSliderFill {
+	position: absolute;
+	width: 134px;
+	height: 8px;
+	background-image: url('SliderFill.png');
+}

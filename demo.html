@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Interactive Demo</title>
+
+
+  <link rel="stylesheet" href="Tangle/TangleKit.css" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href="demo.css" type="text/css">
+  <script type="text/javascript" src="Tangle/Tangle.js"></script>
+  <script type="text/javascript" src="Tangle/mootools.js"></script>
+  <script type="text/javascript" src="Tangle/sprintf.js"></script>
+  <script type="text/javascript" src="Tangle/BVTouchable.js"></script>
+  <script type="text/javascript" src="Tangle/TangleKit.js"></script>
+</head>
+
+<body id="demo--wrapper">
+
+<div class="wrapper container card">
+  <h3>Savings Rate Calculator</h3>
+	<p class="lead">Try hovering over the dashed underlined values and dragging them.</p>
+	<p>
+		My yearly after-tax income (w/401k included) is
+    <span data-var="yearlyIncome" data-format="currency" class="FIAdjustableNumber" data-min="0" data-max="200000" data-step="1000"></span>
+    and I save
+    <span data-var="yearlySavings" data-format="currency" class="FIAdjustableNumber" data-min="0" data-max="200000" data-step="1000"></span>
+    total for retirement – including 401k and all other means. Using these figures, my savings rate (SR) will be about
+    <span data-var="savingsRate" data-format="percent" class="tangle--dynamic"></span>.
+	</p>
+	<p>This is calculated with the following formula:</p>
+	<p class="text-center">
+	  (<span class="tangle--dynamic" data-var="yearlySavings" data-format="currency"></span> / <span class="tangle--dynamic" data-var="yearlyIncome" data-format="currency"></span>) * 100% = <span class="tangle--dynamic" data-var="savingsRate" data-format="percent"></span> Savings Rate
+	</p>
+
+  <p>
+    Starting today with no savings, you would be financially independent once you saved up
+    <span class="tangle--dynamic" data-var="impliedRetirementStashNeeded" data-format="currency"></span>.
+  
+    At your current savings rate, you'd be financially independent in
+    <span class="tangle--dynamic" data-var="yearsUntilFiOnlySR" data-format="years"></span>.
+  </p>
+
+	<p class="lead fi--info">
+		<i>
+      Adam Says: This assume that stock markets will rise
+      <span data-var="marketGrowth" class="FIAdjustableNumber" data-step="0.002" data-max="0.20" data-min="0.001" data-format="percentDecimal" class="tangle--dynamic">/yr</span>
+      and that you would withdraw
+      <span data-var="wr" class="FIAdjustableNumber" data-step="0.001" data-max="0.20" data-min="0" data-format="percentDecimal" class="tangle--dynamic">/yr</span> of your total savings when you stop earning money.
+    </i>
+	</p>
+</div>
+
+<script type="text/javascript" src="demo.js"></script>
+</body>
+</html>
